@@ -1,0 +1,54 @@
+body {
+    background-image: url("../images/adminhomeback.jpg");
+    height: 100%;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.context {
+    text-align: center;
+    height: 50%;
+    vertical-align: middle;
+}
+
+.box {
+    background-color: white;
+    background: rgba(236, 236, 236, 0.3);
+    /*border: 1px solid gray;*/
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 100%;
+}
+
+.titlebox {
+    color: white;
+    border: 1px solid white;
+    height: 50%;
+    padding-top: 70px;
+    padding-bottom: 80px;
+    opacity: 1;
+    font-family: "Roboto Light", "Times New Roman", serif;
+}
+
+.inputzone {
+    border: 1px solid white;
+    height: 50%;
+    padding-top: 51px;
+    padding-bottom: 101px;
+}
+
+.inputbutton {
+    width: 80px;
+    height: 50px;
+}

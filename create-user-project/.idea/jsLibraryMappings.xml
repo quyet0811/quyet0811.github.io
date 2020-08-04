@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="file://$PROJECT_DIR$" libraries="{jquery-ui}" />
+    <file url="file://$PROJECT_DIR$/create-user-core" libraries="{jquery-ui}" />
+    <file url="file://$PROJECT_DIR$/create-user-web" libraries="{bootstrap, bootstrap-datepicker, jquery, jquery-ui, popper.js}" />
+  </component>
+</project>
