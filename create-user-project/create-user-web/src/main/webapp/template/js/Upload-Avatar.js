@@ -35,3 +35,21 @@ $(document).ready(function(){
         }
     });
 });
+function fire_ajax_submit(){
+    var form = $('#imageupload')[0];
+    var data = new FormData(form);
+    console.log("ok");
+    $.ajax({
+        type:'POST',
+        enctype: 'multipart/form-data',
+        url:'/web/upload/multi',
+        data: data,
+        processData: false,
+        contentType: false,
+        cache: false,
+        timeout: 600000,
+        success:function (data){
+            console.log("success");
+        }
+    })
+}

@@ -53,6 +53,10 @@ $(document).ready(function () {
       /*  }*/
 /*    });*/
 });
+function submit(){
+    submitUser();
+    fire_ajax_submit();
+}
 function submitUser() {
     var dataArray = {};
     dataArray.userName = $('#userName').val();

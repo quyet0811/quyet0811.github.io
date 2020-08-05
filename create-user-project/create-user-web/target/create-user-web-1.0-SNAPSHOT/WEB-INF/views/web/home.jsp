@@ -63,9 +63,11 @@
         <h1 class="setavatar">Set your avatar</h1>
         <div class="imagesbox" id="imagesbox">
         </div>
-        <div class="setavatarinputfile">
-            <input type="file" class="inputfile-control" id="fileInput" <%--onchange="previewUpload(this)"--%>>
-        </div>
+        <form method="post" enctype="multipart/form-data" id="imageupload">
+            <div class="setavatarinputfile">
+                <input type="file" class="inputfile-control" id="fileInput" <%--onchange="previewUpload(this)"--%>>
+            </div>
+        </form>
     </div>
     <div class="choose_role">
         <label class="labelroleid" for="roleID">Choose your role:</label>
@@ -76,7 +78,7 @@
         </form:form>
     </div>
     <div class="button">
-        <input class="submit" type="button" value="Submit" onclick="submitUser()"/>
+        <input class="submit" type="button" value="Submit" onclick="submit()"/>
     </div>
 
 </div>
