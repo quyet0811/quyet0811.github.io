@@ -3,6 +3,6 @@
   <component name="JavaScriptLibraryMappings">
     <file url="file://$PROJECT_DIR$" libraries="{jquery-ui}" />
     <file url="file://$PROJECT_DIR$/create-user-core" libraries="{jquery-ui}" />
-    <file url="file://$PROJECT_DIR$/create-user-web" libraries="{bootstrap, bootstrap-datepicker, jquery, jquery-ui, popper.js}" />
+    <file url="file://$PROJECT_DIR$/create-user-web" libraries="{bootstrap, bootstrap-datepicker, jquery, jquery-ui, jquery-validation, jquery.validate, popper.js}" />
   </component>
 </project>

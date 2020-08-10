@@ -4,7 +4,7 @@
     background-color: white;
     background-color: rgba(268,268,268,1);
     height: 80px;
-    padding: 20px 10px 30px 10px;
+    padding: 20px 10px 30px 20px;
 }
 .Title{
     float: left;
@@ -14,3 +14,27 @@
     clear: both;
     display: table;
 }
+.navbar-collapse{
+    float: right;
+    /*border: 1px solid black;*/
+    height: 40px;
+    width: 800px;
+    padding-top: 5px;
+}
+.navbar-nav{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.nav-item{
+    float: right;
+    margin-right: 30px;
+    font-size: x-large;
+
+}
+.nav-link{
+    text-decoration: none;
+}
+/*.navbar li a{
+    !*color: black;!important;*!
+}*/

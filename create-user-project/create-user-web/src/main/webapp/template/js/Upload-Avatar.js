@@ -35,6 +35,18 @@ $(document).ready(function(){
         }
     });
 });
+
+$(document).ready(function () {
+    $("#btnSubmit").click(function (event) {
+
+        //stop submit the form, we will post it manually.
+        event.preventDefault();
+        submitUser();
+        fire_ajax_submit();
+
+    });
+
+});
 function fire_ajax_submit(){
     var form = $('#imageupload')[0];
     var data = new FormData(form);
@@ -42,7 +54,7 @@ function fire_ajax_submit(){
     $.ajax({
         type:'POST',
         enctype: 'multipart/form-data',
-        url:'/web/upload/multi',
+        url:'upload/multi',
         data: data,
         processData: false,
         contentType: false,

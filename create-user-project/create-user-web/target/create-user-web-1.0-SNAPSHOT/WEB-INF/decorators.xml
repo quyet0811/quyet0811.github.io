@@ -21,6 +21,12 @@
     <decorator name="web" page="web.jsp">
         <pattern>/adduserpage*</pattern>
     </decorator>
+    <decorator name="web" page="web.jsp">
+        <pattern>/upload*</pattern>
+    </decorator>
+    <decorator name="web" page="web.jsp">
+        <pattern>/deleteuser*</pattern>
+    </decorator>
 
 
 <!--

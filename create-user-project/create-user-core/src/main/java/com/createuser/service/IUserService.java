@@ -6,5 +6,10 @@ import java.util.List;
 
 public interface IUserService {
     List<UserDTO> getAll();
+    /*List<UserDTO> getUserByName(String userName);*/
+   // UserDTO getUserFollowID(Long id);
     UserDTO insert(UserDTO userDTO);
+    UserDTO update(UserDTO userDTO, long id);
+    void deleteUser(long ids);
+   // int getTotalItems(String searchValue);*/
 }

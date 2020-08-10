@@ -7,8 +7,8 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
-public class UserDTO implements Serializable {
-    private static final long serialVersionUID = -1168917729740319618L;
+public class UserDTO extends AbtractDTO<UserDTO>{
+    private static final long serialVersionUID = 950245506550625922L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -17,6 +17,16 @@ public class UserDTO implements Serializable {
     private String email;
     private String phone;
     private String role_id;
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+
+    private String avatar;
     private List<RoleDTO> rolesList;
     private Map<String, String> roles;
 

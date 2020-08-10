@@ -28,11 +28,59 @@ public class UserService implements IUserService {
         return userDTOS;
     }
 
+    /*@Override
+    public List<UserDTO> getUserByName(String userName) {
+        List<UserEntity> userEntities = userRepository.findAll(userName);
+        List<UserDTO> userDTOS= new ArrayList<>();
+        for(UserEntity item: userEntities){
+            UserDTO result = userConverter.convertToDto(item);
+            userDTOS.add(result);
+        }
+        return userDTOS;
+    }
+*/
+  /*  @Override
+    public UserDTO getUserFollowID(Long id) {
+        UserDTO userDTO = userConverter.convertToDto(userRepository.findOne(id));
+        return userDTO;
+    }*/
+
     @Override
     public UserDTO insert(UserDTO userDTO) {
         UserEntity userEntity = userConverter.convertToEntity(userDTO);
         userEntity = userRepository.save(userEntity);
         return userConverter.convertToDto(userEntity);
     }
+
+    @Override
+    public UserDTO update(UserDTO userDTO, long id) {
+        UserEntity userEntity = userRepository.findOne(id);
+        userEntity.setUserName(userDTO.getUserName());
+        userEntity = userRepository.save(userEntity);
+        return userConverter.convertToDto(userEntity);
+    }
+
+    @Override
+    public void deleteUser(long ids) {
+       UserEntity userEntity = userRepository.findOne(ids);
+       if(userEntity != null) userRepository.delete(ids);
+
+    }
+
+/*
+    @Override
+    public int getTotalItems(String searchValue) {
+        int totalItem = 0;
+        int totalItemDelete = (int) userRepository.countByStatus(0);
+        if (searchValue != null) {
+            totalItem = (int) userRepository.countByUserNameOrFullNameOrPhoneOrEmailContainingIgnoreCase(searchValue, searchValue, searchValue, searchValue) - totalItemDelete;
+        } else {
+            totalItem = (int) userRepository.count() - totalItemDelete;
+        }
+        if (totalItem < 0) {
+            return 0;
+        }
+        return totalItem;
+    }*/
 
 }

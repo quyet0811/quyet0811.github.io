@@ -1,16 +1,9 @@
 /*src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"*/
 
-/*$(document).ready(function () {
 
-});*/
-var check_valdidate;
-var check_exist;
 $(document).ready(function () {
-    check_valdidate = false;
-    check_exist =true;
-    /*$("#registrationForm").validate({*/
-
-       /* rules: {
+    $("#regisForm").validate({
+        rules: {
             "userName": { // <-- assign by field name and use quotes
                 required: true,
                 minlength: 6,
@@ -18,52 +11,45 @@ $(document).ready(function () {
             },
             "email": {
                 required: true,  // <-- this rule was misspelled 'equired'
-                email:true
+                email: true
             },
             "phone": {
                 required: true,
+                minlength: 10,
+                number: true
             },
-            "role":{
-                required: true,
-                valueMissing: false,
-            }
         },
         messages: {
 
             "userName": {
-                required: "name is required!",
-                minlength: "name must be at least 6 characters long"
+                required: "Name is required!",
+                minlength: "Name must be at least 6 characters long"
             },
             "email": {
                 required: "Please enter a email",
-                email:"Email is not valid"
+                email: "Email is not valid"
             },
             "phone": {
                 required: "Please enter a phone number",
-
-
+                minlength: "Phone number must be at least 10 numbers",
+                number: "Phone number mustn't have words"
             },
-            "role":{
-                required:"Please choose your role",
-            }
         },
-        submitHandler: function(form)
-        {*/
-            check_valdidate = true;
-      /*  }*/
-/*    });*/
+    });
+/*    $('#btnFind').click(function (event){
+        event.preventDefault();
+        submitToDelete();
+    })*/
 });
-function submit(){
-    submitUser();
-    fire_ajax_submit();
-}
+
 function submitUser() {
     var dataArray = {};
     dataArray.userName = $('#userName').val();
     dataArray.email = $('#email').val();
     dataArray.phone = $('#phone').val();
     dataArray.role_id = $('#roleID').val();
-    if(check_valdidate&&check_exist){
+    dataArray.avatar = $('#fileInput').val();
+    if($('#regisForm').valid()){
         addUser(dataArray);
     }
     /*addUser(dataArray);*/
@@ -89,4 +75,17 @@ alert("Job done!!!!");
 alert(xhr.responseText);
 });
 
+
+    /*
+    function deleteUser(){
+        var list = document.forms["formShowData"];
+        var listSend;
+        for(var i = 0; i < list.length;i++){
+            var check = list.element[i];
+            check.checkbox = $('#checkbox').val();
+            if(check.checkbox == true){
+                listSend.push(check);
+            }
+        }
+    }}*/
 }

@@ -44,6 +44,7 @@ body{
     margin-top: 10px;
     padding-left: 20px;
     font-size: large;
+    outline:none;
 }
 .uptexttitle{
     margin-left: 24px;
@@ -91,14 +92,21 @@ body{
     float: left;
     height: 60px;
     width: 100px;
-    margin-top: 25px;
+    margin-top: 70px;
+    margin-left:40px;
+
 }
 .submit{
     border-radius: 20px;
     height: 60px;
     width: 100px;
     font-size: x-large;
+    border: 0px;
+    outline:none;
 }
 .submit:hover{
+    cursor: pointer;
+}
+#roleID:hover{
     cursor: pointer;
 }
