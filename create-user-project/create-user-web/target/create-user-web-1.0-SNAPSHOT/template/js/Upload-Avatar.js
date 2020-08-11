@@ -1,20 +1,4 @@
-/*
-function previewUpload (input){
-    const [file] = input.files
-    const preview = document.getElementById('imagesbox')
-    const reader = new FileReader();
 
-    reader.onload = event =>{
-        const img = document.createElement('img')
-        img.src = event.target.result
-        img.height=173
-        img.width = 173
-        img.alt = 'file'
-        img.className='picture'
-        preview.appendChild(img)
-    }
-    reader.readAsDataURL(file)
-}*/
 $(document).ready(function(){
     $('#fileInput').on('change', function() {
         var files = $(this)[0].files;

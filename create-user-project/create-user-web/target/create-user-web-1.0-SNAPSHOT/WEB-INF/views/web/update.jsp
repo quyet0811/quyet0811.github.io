@@ -13,8 +13,8 @@
     <title>Update</title>
 </head>
 <body>
-<div class="update-username">
-    <form id="updateusername" method="get">
+<div class="clearfix">
+    <form id="updateusername" <%--method="get"--%>>
         <div class="update-username-byID">
             <div class="title-ID">
                 <p>ID</p>
@@ -28,36 +28,46 @@
             <div>
                 <input name="update-name" class="text" type="text" id="update-name">
             </div>
-            <div class="button-find">
-                <input class="find-update" type="button" value="find" id="btnUpdate" onclick="updateUser()"/>
+            <div class="title-email">
+                <p>Email</p>
             </div>
+            <div>
+                <input name="update-email" class="text" type="text" id="update-email">
+            </div>
+            <div class="title-phone">
+                <p>Phone</p>
+            </div>
+            <div>
+                <input name="update-phone" class="text" type="text" id="update-phone">
+            </div>
+            <%--<div class="button-find">
+                <input class="find-update" type="button" value="Update" id="btnUpdate" onclick="updateUser()"/>
+            </div>--%>
         </div>
+
+
     </form>
+    <div class="avatar">
+        <h1 class="setavatar">Set your avatar</h1>
+        <div class="imagesboxupdate" id="imagesbox">
+        </div>
+        <form method="POST" enctype="multipart/form-data" id="imageupdate">
+            <input class="setavatarinputfile" id="fileUpdate" type="file" name="files" accept="image/png, image/jpeg"
+                   multiple/>
+            <div class="button">
+
+                <input class="find-update" type="button" value="Update" id="btnUpdate" <%--onclick="submit()"--%>/>
+            </div>
+        </form>
+    </div>
+    <div class="choose_role">
+        <label class="labelroleid" for="roleID">Choose your role:</label>
+        <form:form id="role" commandName="model">
+            <form:select path="role_id" id="roleID">
+                <form:options items="${model.roles}"/>
+            </form:select>
+        </form:form>
+    </div>
 </div>
-<script>
-    function updateUser(){
-        var data = {};
-        var Id = $('#update-ID').val();
-        data.userName = $('#update-name').val();
-
-        update(data,Id);
-    }
-    function update(data,id){
-
-        $.ajax({
-            type: 'PUT',
-            url:'web/api/user/'+id,
-            data: JSON.stringify(data),
-            dataType: 'json',
-            /*contentType:'application/json',*/
-            success: function(res) {
-                alert("Cập Nhật Thành Công !");
-            },
-            error: function(res) {
-                alert("Cập Nhật Thất Bại !");
-            }
-        })
-    }
-</script>
 </body>
 </html>

@@ -1,0 +1,43 @@
+.update-username-byID{
+    float: left;
+    margin-top: 70px;
+    border-radius: 20px;
+    border: 1px solid gray;
+    background-color: white;
+    background-color: rgba(268,268,268,0.7);
+    height: 430px;
+    width: 500px;
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.button-find{
+    border-radius: 20px;
+    float: left;
+    height: 60px;
+    width: 100px;
+    margin-top: 20px;
+    margin-left:300px;
+}
+.find-update{
+    border-radius: 10px;
+    height: 40px;
+    width: 100px;
+    font-size: x-large;
+    border: 0px;
+    outline:none;
+    background-color: white;
+}
+.title-email{
+    margin-left: 24px;
+    height: 35px;
+    font-size: xx-large;
+}
+.title-phone{
+    margin-left: 24px;
+    height: 35px;
+    font-size: xx-large;
+}
+.find-update:hover{
+    cursor: pointer;
+}

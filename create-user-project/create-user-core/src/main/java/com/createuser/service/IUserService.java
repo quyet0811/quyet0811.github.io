@@ -7,9 +7,9 @@ import java.util.List;
 public interface IUserService {
     List<UserDTO> getAll();
     /*List<UserDTO> getUserByName(String userName);*/
-   // UserDTO getUserFollowID(Long id);
+    // UserDTO getUserFollowID(Long id);
     UserDTO insert(UserDTO userDTO);
-    UserDTO update(UserDTO userDTO, long id);
+    UserDTO update(UserDTO userDTO);
     void deleteUser(long ids);
-   // int getTotalItems(String searchValue);*/
+    // int getTotalItems(String searchValue);*/
 }

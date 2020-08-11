@@ -16,11 +16,11 @@
                 </li>
                 <li class="nav-item"><a class="nav-link" href="<c:url value='/web/update'/>">Update</a></li>
                 <li class="nav-item" ><a class="nav-link active" href="<c:url value='/adduserpage'/>">Add</a></li>
-                <li class="nav-item"><a class="nav-link" href="">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="<c:url value='/admin/home'/>">Home</a></li>
 
             </ul>
 
         </div
-       <%-- </nav>--%>
+        <%-- </nav>--%>
     </div>
 </div>

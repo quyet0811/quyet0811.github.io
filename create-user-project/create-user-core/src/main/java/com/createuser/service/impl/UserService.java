@@ -53,17 +53,21 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public UserDTO update(UserDTO userDTO, long id) {
-        UserEntity userEntity = userRepository.findOne(id);
+    public UserDTO update(UserDTO userDTO) {
+        UserEntity userEntity = userRepository.findOne(userDTO.getId());
         userEntity.setUserName(userDTO.getUserName());
+        userEntity.setEmail(userDTO.getEmail());
+        userEntity.setPhone(userDTO.getPhone());
+        userEntity.setRole_id(userDTO.getRole_id());
+        userEntity.setAvatar(userDTO.getAvatar());
         userEntity = userRepository.save(userEntity);
         return userConverter.convertToDto(userEntity);
     }
 
     @Override
     public void deleteUser(long ids) {
-       UserEntity userEntity = userRepository.findOne(ids);
-       if(userEntity != null) userRepository.delete(ids);
+        UserEntity userEntity = userRepository.findOne(ids);
+        if(userEntity != null) userRepository.delete(ids);
 
     }
 

@@ -1,4 +1,4 @@
-/*src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"*/
+
 
 
 $(document).ready(function () {
@@ -36,10 +36,7 @@ $(document).ready(function () {
             },
         },
     });
-/*    $('#btnFind').click(function (event){
-        event.preventDefault();
-        submitToDelete();
-    })*/
+
 });
 
 function submitUser() {
@@ -76,16 +73,5 @@ alert(xhr.responseText);
 });
 
 
-    /*
-    function deleteUser(){
-        var list = document.forms["formShowData"];
-        var listSend;
-        for(var i = 0; i < list.length;i++){
-            var check = list.element[i];
-            check.checkbox = $('#checkbox').val();
-            if(check.checkbox == true){
-                listSend.push(check);
-            }
-        }
-    }}*/
+
 }
